@@ -1,3 +1,4 @@
+// BPlusTree.hpp
 #ifndef BONSAIDB_BPLUSTREE_HPP
 #define BONSAIDB_BPLUSTREE_HPP
 
@@ -37,10 +38,8 @@ private:
     BPlusNode read_node(uint32_t page_id);
     void write_node(uint32_t page_id, const BPlusNode& node);
     BPlusNode find_leaf_node(int32_t key, uint32_t& page_id);
-
     void insert_into_parent(BPlusNode& left_child, int32_t key, uint32_t right_child_page_id);
-
     void remove_entry(uint32_t node_id, int32_t key);
 };
 
-#endif //BONSAIDB_BPLUSTREE_HPP
+#endif // BONSAIDB_BPLUSTREE_HPP

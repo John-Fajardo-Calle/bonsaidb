@@ -13,14 +13,8 @@ DatabaseEngine::~DatabaseEngine() = default;
 
 bool DatabaseEngine::insert(const Record& record) {
     std::lock_guard<std::mutex> lock(engine_mutex);
+    uint32_t data_page_to_use = next_data_page_id;
     uint32_t num_pages = file_manager->allocatePage();
-    uint32_t data_page_to_use;
-
-    if (num_pages <= 1) {
-        data_page_to_use = 1;
-    } else {
-        data_page_to_use = num_pages - 1;
-    }
 
     Page page;
     if (data_page_to_use < num_pages) {
@@ -32,6 +26,7 @@ bool DatabaseEngine::insert(const Record& record) {
         Page new_page;
         new_page.addRecord(record);
         page = new_page;
+        next_data_page_id = data_page_to_use;
     }
 
     if (!file_manager->writePage(data_page_to_use, page)) {

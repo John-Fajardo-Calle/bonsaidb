@@ -1,11 +1,12 @@
+// BPlusTree.cpp
 #include "BPlusTree.hpp"
 #include <algorithm>
 #include <cstring>
 #include <iostream>
 
-void BPlusNode::serialize(std::vector<char> &buffer) const {
+void BPlusNode::serialize(std::vector<char>& buffer) const {
     buffer.assign(PAGE_SIZE, 0);
-    char *ptr = buffer.data();
+    char* ptr = buffer.data();
     memcpy(ptr, &is_leaf, sizeof(is_leaf)); ptr += sizeof(is_leaf);
     memcpy(ptr, &self_page_id, sizeof(self_page_id)); ptr += sizeof(self_page_id);
     memcpy(ptr, &parent_page_id, sizeof(parent_page_id)); ptr += sizeof(parent_page_id);
@@ -23,8 +24,8 @@ void BPlusNode::serialize(std::vector<char> &buffer) const {
     if (!data_page_ids.empty()) memcpy(ptr, data_page_ids.data(), count * sizeof(uint32_t));
 }
 
-void BPlusNode::deserialize(const std::vector<char> &buffer) {
-    const char *ptr = buffer.data();
+void BPlusNode::deserialize(const std::vector<char>& buffer) {
+    const char* ptr = buffer.data();
     memcpy(&is_leaf, ptr, sizeof(is_leaf)); ptr += sizeof(is_leaf);
     memcpy(&self_page_id, ptr, sizeof(self_page_id)); ptr += sizeof(self_page_id);
     memcpy(&parent_page_id, ptr, sizeof(parent_page_id)); ptr += sizeof(parent_page_id);
@@ -43,7 +44,7 @@ void BPlusNode::deserialize(const std::vector<char> &buffer) {
     if (count > 0) memcpy(data_page_ids.data(), ptr, count * sizeof(uint32_t));
 }
 
-BPlusTree::BPlusTree(FileManager &fm, uint32_t root_id) : file_manager(fm), root_page_id(root_id) {
+BPlusTree::BPlusTree(FileManager& fm, uint32_t root_id) : file_manager(fm), root_page_id(root_id) {
     if (file_manager.allocatePage() <= root_page_id) {
         BPlusNode root;
         root.self_page_id = root_page_id;
@@ -56,13 +57,14 @@ std::optional<uint32_t> BPlusTree::search(int32_t key) {
     uint32_t current_page_id = root_page_id;
     while (true) {
         BPlusNode node = read_node(current_page_id);
-        auto it = std::lower_bound(node.keys.begin(), node.keys.end(), key);
         if (node.is_leaf) {
+            auto it = std::lower_bound(node.keys.begin(), node.keys.end(), key);
             if (it != node.keys.end() && *it == key) {
                 return node.data_page_ids[std::distance(node.keys.begin(), it)];
             }
             return std::nullopt;
         }
+        auto it = std::upper_bound(node.keys.begin(), node.keys.end(), key);
         current_page_id = node.children_page_ids[std::distance(node.keys.begin(), it)];
     }
 }
@@ -123,7 +125,7 @@ void BPlusTree::insert(int32_t key, uint32_t data_page_id) {
     }
 }
 
-void BPlusTree::insert_into_parent(BPlusNode &left_child, int32_t key, uint32_t right_child_id) {
+void BPlusTree::insert_into_parent(BPlusNode& left_child, int32_t key, uint32_t right_child_id) {
     if (left_child.parent_page_id == 0) {
         uint32_t new_root_id = file_manager.allocatePage();
         BPlusNode new_root;
@@ -236,6 +238,7 @@ void BPlusTree::remove_entry(uint32_t node_id, int32_t key) {
         uint32_t left_sibling_id = parent.children_page_ids[node_idx - 1];
         BPlusNode left_sibling = read_node(left_sibling_id);
         if (left_sibling.keys.size() > MIN_KEYS) {
+            // Rotación o movimiento de clave desde el hermano izquierdo (pendiente de implementar)
         }
     }
 
@@ -243,6 +246,7 @@ void BPlusTree::remove_entry(uint32_t node_id, int32_t key) {
          uint32_t right_sibling_id = parent.children_page_ids[node_idx + 1];
          BPlusNode right_sibling = read_node(right_sibling_id);
          if (right_sibling.keys.size() > MIN_KEYS) {
+             // Rotación o movimiento de clave desde el hermano derecho (pendiente de implementar)
          }
     }
 
@@ -252,7 +256,7 @@ void BPlusTree::remove_entry(uint32_t node_id, int32_t key) {
         int32_t key_from_parent = parent.keys[node_idx - 1];
 
         left_sibling.keys.insert(left_sibling.keys.end(), node.keys.begin(), node.keys.end());
-        if(!left_sibling.is_leaf) {
+        if (!left_sibling.is_leaf) {
             left_sibling.keys.insert(left_sibling.keys.begin() + MIN_KEYS, key_from_parent);
             left_sibling.children_page_ids.insert(left_sibling.children_page_ids.end(), node.children_page_ids.begin(), node.children_page_ids.end());
         } else {
@@ -273,7 +277,7 @@ BPlusNode BPlusTree::read_node(uint32_t page_id) {
     return node;
 }
 
-void BPlusTree::write_node(uint32_t page_id, const BPlusNode &node) {
+void BPlusTree::write_node(uint32_t page_id, const BPlusNode& node) {
     std::vector<char> buffer;
     node.serialize(buffer);
     file_manager.writeRawPage(page_id, buffer);

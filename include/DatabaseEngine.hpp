@@ -34,7 +34,7 @@ private:
 
     // Descomentar y cambiar a un puntero inteligente
     std::unique_ptr<BPlusTree> index;
-
+    uint32_t next_data_page_id{1};
     std::mutex engine_mutex;
 };
 
