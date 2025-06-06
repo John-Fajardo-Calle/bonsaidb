@@ -3,8 +3,11 @@
 #include <stdexcept>
 #include <cstdio>
 #include "DatabaseEngine.hpp"
+#include <windows.h> // Para la codificación de la consola
+
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     const std::string db_file = "stress_test_final.db";
     std::remove(db_file.c_str());
 
