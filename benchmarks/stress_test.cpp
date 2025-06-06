@@ -3,18 +3,21 @@
 #include <stdexcept>
 #include <cstdio>
 #include "DatabaseEngine.hpp"
-#include <windows.h> // Para la codificación de la consola
-
+#ifdef _WIN32
+#  include <windows.h> // Para la codificación de la consola en Windows
+#endif
 
 int main() {
+#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
+#endif
     const std::string db_file = "stress_test_final.db";
     std::remove(db_file.c_str());
 
     const int NUM_RECORDS = 50000;
+    size_t operations = 0;
 
     std::cout << "--- Iniciando Test de Estabilidad y Carga ---" << std::endl;
-    size_t operations = 0;
 
     try {
         DatabaseEngine engine(db_file);
@@ -32,7 +35,6 @@ int main() {
                 return 1;
             }
             operations++;
-
             if (operations % 5000 == 0) {
                 std::cout << "  " << operations << " registros insertados..." << std::endl;
             }
@@ -50,7 +52,7 @@ int main() {
                 std::cerr << "Error Crítico: Se encontró un registro incorrecto. Se esperaba ID " << i << ", pero se obtuvo " << found_record->id << std::endl;
                 all_found = false;
             }
-             if (i % 5000 == 0) {
+            if (i % 5000 == 0) {
                 std::cout << "  " << i << " registros verificados..." << std::endl;
             }
         }

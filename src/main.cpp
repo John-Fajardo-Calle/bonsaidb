@@ -3,12 +3,13 @@
 #include <vector>
 #include <sstream>
 #include <cstring> // Para strncpy
-#include <windows.h> // Para la codificación de la consola
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 #include "DatabaseEngine.hpp"
 #include "Record.hpp"
 
-// --- Función Auxiliar para Parsear Comandos ---
 std::vector<std::string> split(const std::string& s, char delimiter) {
     std::vector<std::string> tokens;
     std::string token;
@@ -37,7 +38,9 @@ void print_help() {
 
 // --- Punto de Entrada Principal ---
 int main(int argc, char* argv[]) {
+#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
+#endif
     // Verificamos que se haya pasado el nombre del archivo de la DB como argumento.
     if (argc != 2) {
         std::cerr << "Uso: " << argv[0] << " <archivo.db>" << std::endl;

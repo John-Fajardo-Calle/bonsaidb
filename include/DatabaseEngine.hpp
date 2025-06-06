@@ -9,14 +9,7 @@
 #include <optional> // Para std::optional
 #include <mutex>    // Para std::mutex (preparando para la concurrencia)
 
-/**
- * @class DatabaseEngine
- * @brief El motor principal de la base de datos que gestiona todas las operaciones.
- *
- * Esta clase es la interfaz pública para interactuar con la base de datos.
- * Utiliza un FileManager para la persistencia en disco y en el futuro
- * gestionará índices y concurrencia.
- */
+
 class DatabaseEngine {
 public:
     explicit DatabaseEngine(const std::string& db_path);
@@ -31,8 +24,6 @@ public:
 
 private:
     std::unique_ptr<FileManager> file_manager;
-
-    // Descomentar y cambiar a un puntero inteligente
     std::unique_ptr<BPlusTree> index;
     uint32_t next_data_page_id{1};
     std::mutex engine_mutex;
