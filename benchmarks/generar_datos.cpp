@@ -3,22 +3,30 @@
 #include <random>
 #include <string>
 #include <filesystem>
+#include <limits>
+#include <windows.h>
 
-int main(int argc, char* argv[]) {
-    if (argc != 3) {
-        std::cerr << "Uso: " << argv[0] << " <archivo.csv> <num_registros>" << std::endl;
-        return 1;
+
+int main() {
+    std::cout << "Ingrese la ruta o carpeta donde desea crear el CSV: ";
+    std::string input_path;
+    std::getline(std::cin, input_path);
+    std::filesystem::path file_path = std::filesystem::absolute(input_path);
+    if (!file_path.has_extension() || std::filesystem::is_directory(file_path)) {
+        file_path /= "datos.csv";
     }
-
-    std::filesystem::path file_path = std::filesystem::absolute(argv[1]);
+    std::cout << "Ingrese el número de registros a crear: ";
 
     int num_records = 0;
-    try {
-        num_records = std::stoi(argv[2]);
-    } catch (...) {
-        std::cerr << "Número de registros inválido" << std::endl;
-        return 1;
+
+    while (!(std::cin >> num_records) || num_records <= 0) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Número inválido. Intente nuevamente: ";
     }
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 
     std::error_code ec;
     std::filesystem::create_directories(file_path.parent_path(), ec);
