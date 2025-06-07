@@ -1,8 +1,11 @@
 #include "DatabaseEngine.hpp"
 #include <cassert>
 #include <cstdio>
+#include <windows.h>
+
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     const char* fname = "test_query.db";
     std::remove(fname);
     DatabaseEngine engine(fname);

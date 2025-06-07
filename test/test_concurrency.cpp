@@ -3,8 +3,10 @@
 #include <thread>
 #include <vector>
 #include <cstdio>
+#include <windows.h>
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     const char* fname = "test_concurrency.db";
     std::remove(fname);
     DatabaseEngine engine(fname);
