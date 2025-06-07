@@ -13,6 +13,7 @@ set(BONSAIDB_SOURCES
         src/FileManager.cpp
         src/BPlusTree.cpp
         src/DatabaseEngine.cpp
+        test_write.cpp
 )
 
 add_library(bonsaidb_lib ${BONSAIDB_SOURCES})

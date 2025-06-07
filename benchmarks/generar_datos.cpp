@@ -12,9 +12,6 @@ int main(int argc, char* argv[]) {
 
     std::filesystem::path file_path = std::filesystem::absolute(argv[1]);
 
-    std::ofstream file(file_path, std::ios::trunc);
-
-    const char* filename = argv[1];
     int num_records = 0;
     try {
         num_records = std::stoi(argv[2]);
@@ -23,9 +20,16 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    std::error_code ec;
+    std::filesystem::create_directories(file_path.parent_path(), ec);
+    if (ec) {
+        std::cerr << "No se pudo crear el directorio del archivo: " << ec.message() << std::endl;
+        return 1;
+    }
 
+    std::ofstream file(file_path, std::ios::trunc);
     if (!file) {
-        std::cerr << "No se pudo abrir el archivo para escritura: " << filename << std::endl;
+        std::cerr << "No se pudo abrir el archivo para escritura: " << file_path << std::endl;
         return 1;
     }
 
@@ -39,6 +43,17 @@ int main(int argc, char* argv[]) {
         file << i << "," << "User" << i << "," << age_dist(rng) << "," << balance_dist(rng) << "\n";
     }
 
-    std::cout << "Archivo generado: " << filename << " con " << num_records << " registros." << std::endl;
+    file.flush();
+    if (!file) {
+        std::cerr << "Error al escribir en el archivo: " << file_path << std::endl;
+        return 1;
+    }
+    file.close();
+    if (file.fail()) {
+        std::cerr << "Error al cerrar el archivo: " << file_path << std::endl;
+        return 1;
+    }
+
+    std::cout << "Archivo generado: " << file_path << " con " << num_records << " registros." << std::endl;
     return 0;
 }
