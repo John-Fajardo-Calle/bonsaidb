@@ -84,8 +84,24 @@ uint32_t FileManager::allocatePage() {
     if (!file_stream.is_open()) return 0;
 
     file_stream.seekg(0, std::ios::end);
-
     size_t fileSize = file_stream.tellg();
+    uint32_t new_page_id = static_cast<uint32_t>(fileSize / PAGE_SIZE);
+
+    std::vector<char> empty(PAGE_SIZE, 0);
+    file_stream.seekp(static_cast<size_t>(new_page_id) * PAGE_SIZE, std::ios::beg);
+    file_stream.write(empty.data(), PAGE_SIZE);
+    file_stream.flush();
+
+    return new_page_id;
+}
+
+uint32_t FileManager::getNumPages() {
+    if (!file_stream.is_open()) return 0;
+
+    std::streampos current_pos = file_stream.tellg();
+    file_stream.seekg(0, std::ios::end);
+    size_t fileSize = file_stream.tellg();
+    file_stream.seekg(current_pos, std::ios::beg);
 
     return static_cast<uint32_t>(fileSize / PAGE_SIZE);
 }

@@ -45,7 +45,8 @@ void BPlusNode::deserialize(const std::vector<char>& buffer) {
 }
 
 BPlusTree::BPlusTree(FileManager& fm, uint32_t root_id) : file_manager(fm), root_page_id(root_id) {
-    if (file_manager.allocatePage() <= root_page_id) {
+    if (file_manager.getNumPages() <= root_page_id) {
+        file_manager.allocatePage();
         BPlusNode root;
         root.self_page_id = root_page_id;
         root.is_leaf = true;

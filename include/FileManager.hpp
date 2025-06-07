@@ -15,6 +15,7 @@ public:
     bool writePage(uint32_t pageId, const Page& page);
     bool readPage(uint32_t pageId, Page& page);
     uint32_t allocatePage();
+    uint32_t getNumPages();
     bool writeRawPage(uint32_t pageId, const std::vector<char>& buffer);
     bool readRawPage(uint32_t pageId, std::vector<char>& buffer);
 
