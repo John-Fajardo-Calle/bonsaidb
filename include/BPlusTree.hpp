@@ -26,7 +26,7 @@ constexpr int MIN_KEYS = (BPLUS_TREE_ORDER - 1) / 2;
 
 class BPlusTree {
 public:
-    BPlusTree(FileManager& file_manager, uint32_t index_root_page_id);
+    explicit BPlusTree(FileManager& file_manager);
     void insert(int32_t key, uint32_t data_page_id);
     std::optional<uint32_t> search(int32_t key);
     bool remove(int32_t key);

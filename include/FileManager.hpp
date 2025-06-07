@@ -18,6 +18,8 @@ public:
     uint32_t getNumPages();
     bool writeRawPage(uint32_t pageId, const std::vector<char>& buffer);
     bool readRawPage(uint32_t pageId, std::vector<char>& buffer);
+    uint32_t readRootPageId();
+    void writeRootPageId(uint32_t pageId);
 
 private:
     std::string filename;

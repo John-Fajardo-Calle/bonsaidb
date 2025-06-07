@@ -44,13 +44,15 @@ void BPlusNode::deserialize(const std::vector<char>& buffer) {
     if (count > 0) memcpy(data_page_ids.data(), ptr, count * sizeof(uint32_t));
 }
 
-BPlusTree::BPlusTree(FileManager& fm, uint32_t root_id) : file_manager(fm), root_page_id(root_id) {
-    if (file_manager.getNumPages() <= root_page_id) {
-        file_manager.allocatePage();
+BPlusTree::BPlusTree(FileManager& fm) : file_manager(fm) {
+    root_page_id = file_manager.readRootPageId();
+    if (root_page_id == 0) {
+        root_page_id = file_manager.allocatePage();
         BPlusNode root;
         root.self_page_id = root_page_id;
         root.is_leaf = true;
         write_node(root_page_id, root);
+        file_manager.writeRootPageId(root_page_id);
     }
 }
 
@@ -143,6 +145,7 @@ void BPlusTree::insert_into_parent(BPlusNode& left_child, int32_t key, uint32_t 
         write_node(root_page_id, new_root);
         write_node(left_child.self_page_id, left_child);
         write_node(right_child_id, right_child);
+        file_manager.writeRootPageId(root_page_id);
         return;
     }
 

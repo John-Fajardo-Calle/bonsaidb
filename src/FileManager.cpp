@@ -3,7 +3,6 @@
 
 
 FileManager::FileManager(const std::string& db_filename) : filename(db_filename) {
-
     file_stream.open(filename, std::ios::in | std::ios::out | std::ios::binary);
 
     if (!file_stream.is_open()) {
@@ -14,6 +13,16 @@ FileManager::FileManager(const std::string& db_filename) : filename(db_filename)
 
     if (!file_stream.is_open()) {
         std::cerr << "Error: No se pudo abrir o crear el archivo de la base de datos: " << filename << std::endl;
+        return;
+    }
+
+    file_stream.seekg(0, std::ios::end);
+    if (file_stream.tellg() == 0) {
+        std::vector<char> empty(PAGE_SIZE, 0);
+        file_stream.write(empty.data(), PAGE_SIZE); // Página de metadatos
+        file_stream.flush();
+        file_stream.seekg(0, std::ios::beg);
+        file_stream.seekp(0, std::ios::beg);
     }
 }
 
@@ -43,6 +52,23 @@ bool FileManager::readRawPage(uint32_t pageId, std::vector<char>& buffer) {
 
     return file_stream.gcount() > 0;
 }
+
+uint32_t FileManager::readRootPageId() {
+    if (!file_stream.is_open()) return 1;
+    file_stream.seekg(0, std::ios::beg);
+    uint32_t id = 1;
+    file_stream.read(reinterpret_cast<char*>(&id), sizeof(id));
+    if (file_stream.gcount() != sizeof(id)) id = 1;
+    return id;
+}
+
+void FileManager::writeRootPageId(uint32_t pageId) {
+    if (!file_stream.is_open()) return;
+    file_stream.seekp(0, std::ios::beg);
+    file_stream.write(reinterpret_cast<const char*>(&pageId), sizeof(pageId));
+    file_stream.flush();
+}
+
 
 bool FileManager::writePage(uint32_t pageId, const Page& page) {
     if (!file_stream.is_open()) return false;
