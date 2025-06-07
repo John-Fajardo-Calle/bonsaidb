@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include <cstring> // Para strncpy
+#include <cstring>
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -20,7 +20,6 @@ std::vector<std::string> split(const std::string& s, char delimiter) {
     return tokens;
 }
 
-// --- Función para Mostrar Ayuda ---
 void print_help() {
     std::cout << "BonsaiDB - Comandos Disponibles:\n"
               << "  insert <id> <nombre> <edad> <saldo>  - Inserta un nuevo registro.\n"
@@ -30,18 +29,16 @@ void print_help() {
               << "     <saldo> : Decimal (ej: 1500.75)\n"
               << "  select <id>                            - Busca un registro por su ID.\n"
               << "  delete <id>                            - (No funcional aún) Elimina un registro por ID.\n"
+              << "  dump                                  - Muestra todos los registros.\n"
               << "  help                                   - Muestra esta ayuda.\n"
               << "  exit                                   - Cierra la aplicación.\n"
               << std::endl;
 }
 
-
-// --- Punto de Entrada Principal ---
 int main(int argc, char* argv[]) {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
 #endif
-    // Verificamos que se haya pasado el nombre del archivo de la DB como argumento.
     if (argc != 2) {
         std::cerr << "Uso: " << argv[0] << " <archivo.db>" << std::endl;
         return 1;
@@ -118,8 +115,12 @@ int main(int argc, char* argv[]) {
                 std::cerr << "Error: 'delete' requiere un ID. Ver 'help'." << std::endl;
                 continue;
             }
-            // La funcionalidad se maneja dentro del motor.
             engine.remove(std::stoi(tokens[1]));
+        } else if (command == "dump") {
+            auto all = engine.dumpAll();
+            for (const auto& rec : all) {
+                std::cout << rec.id << "," << rec.name << "," << rec.age << "," << rec.balance << "\n";
+            }
         }
         else {
             std::cerr << "Comando desconocido: '" << command << "'. Escribe 'help' para ayuda." << std::endl;

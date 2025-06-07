@@ -21,6 +21,7 @@ public:
     bool insert(const Record& record);
     std::optional<Record> find(int32_t id);
     bool remove(int32_t id);
+    std::vector<Record> dumpAll();
 
 private:
     std::unique_ptr<FileManager> file_manager;

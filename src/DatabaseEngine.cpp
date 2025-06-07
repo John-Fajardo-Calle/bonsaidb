@@ -72,3 +72,17 @@ bool DatabaseEngine::remove(int32_t id) {
         return false;
     }
 }
+
+std::vector<Record> DatabaseEngine::dumpAll() {
+    std::lock_guard<std::mutex> lock(engine_mutex);
+    std::vector<Record> all;
+    auto page_ids = index->get_all_data_page_ids();
+    for (uint32_t pid : page_ids) {
+        Page p;
+        if (file_manager->readPage(pid, p)) {
+            auto recs = p.getRecords();
+            all.insert(all.end(), recs.begin(), recs.end());
+        }
+    }
+    return all;
+}

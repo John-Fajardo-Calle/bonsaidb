@@ -1,8 +1,8 @@
-// BPlusTree.cpp
 #include "BPlusTree.hpp"
 #include <algorithm>
 #include <cstring>
 #include <iostream>
+#include <unordered_set>
 
 void BPlusNode::serialize(std::vector<char>& buffer) const {
     buffer.assign(PAGE_SIZE, 0);
@@ -285,4 +285,34 @@ void BPlusTree::write_node(uint32_t page_id, const BPlusNode& node) {
     std::vector<char> buffer;
     node.serialize(buffer);
     file_manager.writeRawPage(page_id, buffer);
+}
+
+std::vector<uint32_t> BPlusTree::get_all_data_page_ids() {
+    std::vector<uint32_t> ids;
+    std::unordered_set<uint32_t> seen;
+    uint32_t page_id = root_page_id;
+    while (true) {
+        BPlusNode node = read_node(page_id);
+        if (node.is_leaf) {
+            break;
+        }
+        if (node.children_page_ids.empty()) {
+            return ids;
+        }
+        page_id = node.children_page_ids.front();
+    }
+
+    while (page_id != 0) {
+        BPlusNode leaf = read_node(page_id);
+        if (!leaf.is_leaf) {
+            break;
+        }
+        for (uint32_t pid : leaf.data_page_ids) {
+            if (seen.insert(pid).second) {
+                ids.push_back(pid);
+            }
+        }
+        page_id = leaf.next_leaf_id;
+    }
+    return ids;
 }

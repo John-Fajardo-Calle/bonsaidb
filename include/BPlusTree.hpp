@@ -30,6 +30,8 @@ public:
     void insert(int32_t key, uint32_t data_page_id);
     std::optional<uint32_t> search(int32_t key);
     bool remove(int32_t key);
+    std::vector<uint32_t> get_all_data_page_ids();
+
 
 private:
     FileManager& file_manager;
