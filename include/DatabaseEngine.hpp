@@ -25,7 +25,7 @@ public:
 private:
     std::unique_ptr<FileManager> file_manager;
     std::unique_ptr<BPlusTree> index;
-    uint32_t next_data_page_id{1};
+    uint32_t next_data_page_id{0};
     std::mutex engine_mutex;
 };
 

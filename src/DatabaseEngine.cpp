@@ -7,6 +7,7 @@ constexpr uint32_t INDEX_ROOT_PAGE_ID = 0;
 DatabaseEngine::DatabaseEngine(const std::string& db_path) {
     file_manager = std::make_unique<FileManager>(db_path);
     index = std::make_unique<BPlusTree>(*file_manager, INDEX_ROOT_PAGE_ID);
+    next_data_page_id = file_manager->getNumPages();
 }
 
 DatabaseEngine::~DatabaseEngine() = default;
