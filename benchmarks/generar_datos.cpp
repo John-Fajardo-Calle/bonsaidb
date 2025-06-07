@@ -2,12 +2,17 @@
 #include <iostream>
 #include <random>
 #include <string>
+#include <filesystem>
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         std::cerr << "Uso: " << argv[0] << " <archivo.csv> <num_registros>" << std::endl;
         return 1;
     }
+
+    std::filesystem::path file_path = std::filesystem::absolute(argv[1]);
+
+    std::ofstream file(file_path, std::ios::trunc);
 
     const char* filename = argv[1];
     int num_records = 0;
@@ -18,7 +23,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::ofstream file(filename, std::ios::trunc);
+
     if (!file) {
         std::cerr << "No se pudo abrir el archivo para escritura: " << filename << std::endl;
         return 1;
