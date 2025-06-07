@@ -6,16 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 add_compile_options(-march=x86-64)
 
+# Fuentes principales (sin tests)
 set(BONSAIDB_SOURCES
         src/Record.cpp
         src/Page.cpp
         src/FileManager.cpp
         src/BPlusTree.cpp
         src/DatabaseEngine.cpp
-        include/Utils.hpp
-        test/test_concurrency.cpp
-        test/test_insert.cpp
-        test/test_query.cpp
 )
 
 add_library(bonsaidb_lib ${BONSAIDB_SOURCES})
@@ -24,8 +21,13 @@ target_include_directories(bonsaidb_lib PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
+# Ejecutable principal
 add_executable(bonsaidb src/main.cpp)
 target_link_libraries(bonsaidb PRIVATE bonsaidb_lib)
 
+# Añadir submódulos
+add_subdirectory(benchmarks)  # Debe venir ANTES de usar sus targets
+add_subdirectory(test)        # Si tienes tests unitarios
 
-add_subdirectory(benchmarks)
+# REMOVER esto: ⚠️ No necesario, ya se maneja en benchmarks/
+# add_executable(generar_datos benchmarks/generar_datos.cpp)

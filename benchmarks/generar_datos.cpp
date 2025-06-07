@@ -1,20 +1,39 @@
 #include <fstream>
+#include <iostream>
 #include <random>
 #include <string>
-#include <cstdio>
 
 int main(int argc, char* argv[]) {
-    if(argc != 3){
-        std::printf("Uso: %s <archivo.csv> <num_registros>\n", argv[0]);
+    if (argc != 3) {
+        std::cerr << "Uso: " << argv[0] << " <archivo.csv> <num_registros>" << std::endl;
         return 1;
     }
+
     const char* filename = argv[1];
-    int count = std::stoi(argv[2]);
-    std::ofstream out(filename);
-    std::mt19937 rng(42);
-    std::uniform_int_distribution<int> age_dist(18,70);
-    for(int i=0;i<count;++i){
-        out << i << ",User" << i << ',' << age_dist(rng) << ',' << i*10.0 << '\n';
+    int num_records = 0;
+    try {
+        num_records = std::stoi(argv[2]);
+    } catch (...) {
+        std::cerr << "Número de registros inválido" << std::endl;
+        return 1;
     }
+
+    std::ofstream file(filename, std::ios::trunc);
+    if (!file) {
+        std::cerr << "No se pudo abrir el archivo para escritura: " << filename << std::endl;
+        return 1;
+    }
+
+    file << "id,nombre,edad,saldo\n";
+
+    std::mt19937 rng{std::random_device{}()};
+    std::uniform_int_distribution<int> age_dist(18, 65);
+    std::uniform_real_distribution<double> balance_dist(0.0, 10000.0);
+
+    for (int i = 0; i < num_records; ++i) {
+        file << i << "," << "User" << i << "," << age_dist(rng) << "," << balance_dist(rng) << "\n";
+    }
+
+    std::cout << "Archivo generado: " << filename << " con " << num_records << " registros." << std::endl;
     return 0;
 }
