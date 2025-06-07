@@ -4,12 +4,13 @@
 #include <string>
 #include <filesystem>
 #include <limits>
-#include <windows.h>
-#include <ShlObj.h> // NUEVO: Librería para carpetas especiales de Windows.
+#ifdef _WIN32
+#  include <windows.h>
+#  include <ShlObj.h> // Librería para carpetas especiales de Windows.
+#endif
 
-// NUEVO: Función para obtener la ruta del Escritorio del usuario.
-// Devuelve una ruta de filesystem o una ruta vacía si falla.
 std::filesystem::path obtener_ruta_escritorio() {
+#ifdef _WIN32
     PWSTR pszPath = NULL;
     HRESULT hr = SHGetKnownFolderPath(FOLDERID_Desktop, 0, NULL, &pszPath);
 
@@ -19,11 +20,16 @@ std::filesystem::path obtener_ruta_escritorio() {
         return desktop_path;
     }
 
-    return {}; // Devuelve una ruta vacía si hubo un error.
+    return {};
+#else
+    return {};
+#endif
 }
 
 int main() {
+#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
+#endif
 
     // NUEVO: Obtener la ruta del escritorio para usarla como opción predeterminada.
     std::filesystem::path ruta_escritorio_defecto = obtener_ruta_escritorio();
