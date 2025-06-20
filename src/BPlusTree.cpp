@@ -242,16 +242,58 @@ void BPlusTree::remove_entry(uint32_t node_id, int32_t key) {
         uint32_t left_sibling_id = parent.children_page_ids[node_idx - 1];
         BPlusNode left_sibling = read_node(left_sibling_id);
         if (left_sibling.keys.size() > MIN_KEYS) {
-            // Rotación o movimiento de clave desde el hermano izquierdo (pendiente de implementar)
+            if (node.is_leaf) {
+                node.keys.insert(node.keys.begin(), left_sibling.keys.back());
+                node.data_page_ids.insert(node.data_page_ids.begin(),
+                                           left_sibling.data_page_ids.back());
+                left_sibling.keys.pop_back();
+                left_sibling.data_page_ids.pop_back();
+                parent.keys[node_idx - 1] = node.keys.front();
+            } else {
+                node.keys.insert(node.keys.begin(), parent.keys[node_idx - 1]);
+                parent.keys[node_idx - 1] = left_sibling.keys.back();
+                left_sibling.keys.pop_back();
+                uint32_t borrowed_child = left_sibling.children_page_ids.back();
+                left_sibling.children_page_ids.pop_back();
+                node.children_page_ids.insert(node.children_page_ids.begin(),
+                                              borrowed_child);
+                BPlusNode child = read_node(borrowed_child);
+                child.parent_page_id = node.self_page_id;
+                write_node(borrowed_child, child);
+            }
+            write_node(left_sibling_id, left_sibling);
+            write_node(node_id, node);
+            write_node(parent.self_page_id, parent);
+            return;
         }
     }
 
     if (node_idx < parent.children_page_ids.size() - 1) {
-         uint32_t right_sibling_id = parent.children_page_ids[node_idx + 1];
-         BPlusNode right_sibling = read_node(right_sibling_id);
-         if (right_sibling.keys.size() > MIN_KEYS) {
-             // Rotación o movimiento de clave desde el hermano derecho (pendiente de implementar)
-         }
+        uint32_t right_sibling_id = parent.children_page_ids[node_idx + 1];
+        BPlusNode right_sibling = read_node(right_sibling_id);
+        if (right_sibling.keys.size() > MIN_KEYS) {
+            if (node.is_leaf) {
+                node.keys.push_back(right_sibling.keys.front());
+                node.data_page_ids.push_back(right_sibling.data_page_ids.front());
+                right_sibling.keys.erase(right_sibling.keys.begin());
+                right_sibling.data_page_ids.erase(right_sibling.data_page_ids.begin());
+                parent.keys[node_idx] = right_sibling.keys.front();
+            } else {
+                node.keys.push_back(parent.keys[node_idx]);
+                parent.keys[node_idx] = right_sibling.keys.front();
+                right_sibling.keys.erase(right_sibling.keys.begin());
+                uint32_t borrowed_child = right_sibling.children_page_ids.front();
+                right_sibling.children_page_ids.erase(right_sibling.children_page_ids.begin());
+                node.children_page_ids.push_back(borrowed_child);
+                BPlusNode child = read_node(borrowed_child);
+                child.parent_page_id = node.self_page_id;
+                write_node(borrowed_child, child);
+            }
+            write_node(right_sibling_id, right_sibling);
+            write_node(node_id, node);
+            write_node(parent.self_page_id, parent);
+            return;
+        }
     }
 
     if (node_idx > 0) {

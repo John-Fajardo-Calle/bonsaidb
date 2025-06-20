@@ -7,4 +7,6 @@ cd "$BUILD_DIR"
 cmake ..
 make -j$(nproc)
 cd ..
-./stress_test > resultados/bench.log
+RESULT_DIR="benchmarks/resultados"
+mkdir -p "$RESULT_DIR"
+"$BUILD_DIR/benchmarks/stress_test" > "$RESULT_DIR/bench.log"

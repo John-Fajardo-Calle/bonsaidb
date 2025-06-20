@@ -28,6 +28,3 @@ target_link_libraries(bonsaidb PRIVATE bonsaidb_lib)
 # Añadir submódulos
 add_subdirectory(benchmarks)  # Debe venir ANTES de usar sus targets
 add_subdirectory(test)        # Si tienes tests unitarios
-
-# REMOVER esto: ⚠️ No necesario, ya se maneja en benchmarks/
-# add_executable(generar_datos benchmarks/generar_datos.cpp)

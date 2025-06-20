@@ -40,6 +40,8 @@ public:
      */
     std::vector<Record> getRecords() const;
 
+
+    bool removeRecord(int32_t id);
     // --- Métodos de Serialización ---
 
     /**

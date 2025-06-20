@@ -8,7 +8,8 @@
 #include <memory>  // Para std::unique_ptr
 #include <optional> // Para std::optional
 #include <mutex>    // Para std::mutex (preparando para la concurrencia)
-
+#include <shared_mutex>    // Para std::shared_mutex
+#include <mutex>           // Para std::unique_lock
 
 class DatabaseEngine {
 public:
@@ -27,7 +28,7 @@ private:
     std::unique_ptr<FileManager> file_manager;
     std::unique_ptr<BPlusTree> index;
     uint32_t next_data_page_id{0};
-    std::mutex engine_mutex;
+    std::shared_mutex engine_mutex;
 };
 
 #endif //BONSAIDB_DATABASEENGINE_HPP

@@ -28,7 +28,7 @@ void print_help() {
               << "     <edad>  : Entero de 32 bits (ej: 30)\n"
               << "     <saldo> : Decimal (ej: 1500.75)\n"
               << "  select <id>                            - Busca un registro por su ID.\n"
-              << "  delete <id>                            - (No funcional aún) Elimina un registro por ID.\n"
+              << "  delete <id>                            - Elimina un registro por ID.\n"
               << "  dump                                  - Muestra todos los registros.\n"
               << "  help                                   - Muestra esta ayuda.\n"
               << "  exit                                   - Cierra la aplicación.\n"
@@ -115,7 +115,17 @@ int main(int argc, char* argv[]) {
                 std::cerr << "Error: 'delete' requiere un ID. Ver 'help'." << std::endl;
                 continue;
             }
-            engine.remove(std::stoi(tokens[1]));
+            try {
+                int32_t id = std::stoi(tokens[1]);
+                if (engine.remove(id)) {
+                    std::cout << "Registro con ID " << id << " eliminado." << std::endl;
+                } else {
+                    std::cout << "No se encontró el registro con ID " << id << "." << std::endl;
+                }
+            } catch (const std::invalid_argument& e) {
+                std::cerr << "Error: El ID debe ser un número entero." << std::endl;
+            }
+
         } else if (command == "dump") {
             auto all = engine.dumpAll();
             for (const auto& rec : all) {

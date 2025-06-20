@@ -75,6 +75,31 @@ std::vector<Record> Page::getRecords() const {
 
     return records;
 }
+bool Page::removeRecord(int32_t id) {
+    const size_t metadataSize = sizeof(pageId) + sizeof(numRecords);
+    const size_t recordSize = Record::getRecordSize();
+
+    for (uint16_t i = 0; i < numRecords; ++i) {
+        size_t offset = metadataSize + i * recordSize;
+        int32_t current_id;
+        memcpy(&current_id, data.data() + offset, sizeof(current_id));
+        if (current_id == id) {
+            size_t bytes_after = (numRecords - i - 1) * recordSize;
+            if (bytes_after > 0) {
+                memmove(data.data() + offset,
+                        data.data() + offset + recordSize,
+                        bytes_after);
+            }
+            memset(data.data() + metadataSize + (numRecords - 1) * recordSize,
+                   0,
+                   recordSize);
+            numRecords--;
+            return true;
+        }
+    }
+    return false;
+}
+
 
 /**
  * @brief Serializa la página completa a un buffer externo.
