@@ -6,7 +6,7 @@
 #include <limits>
 #ifdef _WIN32
 #  include <windows.h>
-#  include <ShlObj.h> // Librería para carpetas especiales de Windows.
+#  include <ShlObj.h>
 #endif
 
 std::filesystem::path obtener_ruta_escritorio() {
@@ -16,7 +16,7 @@ std::filesystem::path obtener_ruta_escritorio() {
 
     if (SUCCEEDED(hr)) {
         std::filesystem::path desktop_path(pszPath);
-        CoTaskMemFree(pszPath); // Importante: Liberar la memoria que Windows asignó.
+        CoTaskMemFree(pszPath);
         return desktop_path;
     }
 
@@ -31,11 +31,9 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
 #endif
 
-    // NUEVO: Obtener la ruta del escritorio para usarla como opción predeterminada.
     std::filesystem::path ruta_escritorio_defecto = obtener_ruta_escritorio();
     std::filesystem::path directory;
 
-    // MODIFICADO: Paso 1, ahora con opción predeterminada.
     std::cout << "--- Paso 1: Seleccionar Directorio ---" << std::endl;
     if (!ruta_escritorio_defecto.empty()) {
         std::cout << "Presione Enter para usar el Escritorio o ingrese una ruta de directorio: ";
@@ -47,18 +45,16 @@ int main() {
     std::getline(std::cin, dir_path_str);
 
     if (dir_path_str.empty() && !ruta_escritorio_defecto.empty()) {
-        directory = ruta_escritorio_defecto; // El usuario eligió la opción predeterminada.
+        directory = ruta_escritorio_defecto;
     } else {
-        directory = std::filesystem::absolute(dir_path_str); // El usuario ingresó una ruta.
+        directory = std::filesystem::absolute(dir_path_str);
     }
 
-    // Paso 2: Pedir nombre del archivo (sin extensión) - Sin cambios
     std::cout << "\n--- Paso 2: Nombrar el Archivo ---" << std::endl;
     std::cout << "Ingrese el nombre del archivo CSV (sin extensión, dejar vacío para 'datos'): ";
     std::string filename;
     std::getline(std::cin, filename);
 
-    // Limpiar y verificar el nombre del archivo
     filename.erase(filename.find_last_not_of(" \n\r\t") + 1);
     filename.erase(0, filename.find_first_not_of(" \n\r\t"));
 
@@ -66,10 +62,8 @@ int main() {
         filename = "datos";
     }
 
-    // Construir ruta completa
     std::filesystem::path file_path = directory / (filename + ".csv");
 
-    // Paso 3: Pedir número de registros - Sin cambios
     std::cout << "\n--- Paso 3: Definir Registros ---" << std::endl;
     std::cout << "Ingrese el número de registros a crear: ";
     int num_records = 0;
@@ -81,7 +75,6 @@ int main() {
     }
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    // Crear directorios si no existen
     std::error_code ec;
     std::filesystem::create_directories(file_path.parent_path(), ec);
     if (ec) {
@@ -89,7 +82,6 @@ int main() {
         return 1;
     }
 
-    // Crear y escribir el archivo CSV
     std::ofstream file(file_path, std::ios::trunc);
     if (!file) {
         std::cerr << "No se pudo abrir el archivo para escritura: " << file_path << std::endl;

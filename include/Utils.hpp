@@ -21,6 +21,6 @@ namespace Utils {
         return result;
     }
 
-} // namespace Utils
+}
 
-#endif // BONSAIDB_UTILS_HPP
+#endif

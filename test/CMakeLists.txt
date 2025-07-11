@@ -1,4 +1,3 @@
-# test/CMakeLists.txt
 add_executable(test_insert test_insert.cpp)
 add_executable(test_query test_query.cpp)
 add_executable(test_concurrency test_concurrency.cpp

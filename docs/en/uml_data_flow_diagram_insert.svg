@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="977px" preserveAspectRatio="none" style="width:1013px;height:977px;background:#FFFFFF;" version="1.1" viewBox="0 0 1013 977" width="1013px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="335" x="340.75" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="325" x="345.75" y="27.9951">BonsaiDB :: Data Flow - INSERT Operation</text><rect fill="#3C7DC4" height="729.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="203" y="149.7266"/><rect fill="#BA68C8" height="296.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="417" y="511.4531"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="286.3906"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="424.0547"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="590.8516"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="720.3828"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="41" x2="41" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="208" x2="208" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="421.5" x2="421.5" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="694.5" x2="694.5" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="944.5" x2="944.5" y1="118.5938" y2="897.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="5" y="115.292">User (CLI)</text><ellipse cx="41" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M41,58.7969 L41,85.7969 M28,66.7969 L54,66.7969 M41,85.7969 L28,100.7969 M41,85.7969 L54,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="5" y="909.042">User (CLI)</text><ellipse cx="41" cy="920.8438" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M41,928.8438 L41,955.8438 M28,936.8438 L54,936.8438 M41,955.8438 L28,970.8438 M41,955.8438 L54,970.8438 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#D1E8FF" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="144" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="151" y="107.292">DatabaseEngine</text><rect fill="#D1E8FF" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="144" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="151" y="916.042">DatabaseEngine</text><rect fill="#E1BEE7" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="379.5" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="386.5" y="107.292">BPlusTree</text><rect fill="#E1BEE7" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="379.5" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="386.5" y="916.042">BPlusTree</text><rect fill="#FFF8E1" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="646.5" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="653.5" y="107.292">FileManager</text><rect fill="#FFF8E1" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="646.5" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="653.5" y="916.042">FileManager</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="877.5" y="115.292">Database File (.db)</text><path d="M927,66.2969 C927,56.2969 945,56.2969 945,56.2969 C945,56.2969 963,56.2969 963,66.2969 L963,92.2969 C963,102.2969 945,102.2969 945,102.2969 C945,102.2969 927,102.2969 927,92.2969 L927,66.2969 " fill="#E8F5E9" style="stroke:#181818;stroke-width:1.5;"/><path d="M927,66.2969 C927,76.2969 945,76.2969 945,76.2969 C945,76.2969 963,76.2969 963,66.2969 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="877.5" y="909.042">Database File (.db)</text><path d="M927,922.3438 C927,912.3438 945,912.3438 945,912.3438 C945,912.3438 963,912.3438 963,922.3438 L963,948.3438 C963,958.3438 945,958.3438 945,958.3438 C945,958.3438 927,958.3438 927,948.3438 L927,922.3438 " fill="#E8F5E9" style="stroke:#181818;stroke-width:1.5;"/><path d="M927,922.3438 C927,932.3438 945,932.3438 945,932.3438 C945,932.3438 963,932.3438 963,922.3438 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><rect fill="#3C7DC4" height="729.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="203" y="149.7266"/><rect fill="#BA68C8" height="296.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="417" y="511.4531"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="286.3906"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="424.0547"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="590.8516"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="690" y="720.3828"/><polygon fill="#181818" points="191,145.7266,201,149.7266,191,153.7266,195,149.7266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="41" x2="197" y1="149.7266" y2="149.7266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="48" y="144.6606">[1]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="73" y="144.6606">insert(record)</text><line style="stroke:#181818;stroke-width:1.0;" x1="213" x2="255" y1="193.9922" y2="193.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="255" x2="255" y1="193.9922" y2="206.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="214" x2="255" y1="206.9922" y2="206.9922"/><polygon fill="#181818" points="224,202.9922,214,206.9922,224,210.9922,220,206.9922" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="220" y="181.3599">[2]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="245" y="173.7935">lock.acquire()</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97" x="245" y="188.9263">(Exclusive lock)</text><path d="M218,219.9922 L218,259.9922 L435,259.9922 L435,229.9922 L425,219.9922 L218,219.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M425,219.9922 L425,229.9922 L435,229.9922 L425,219.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173" x="224" y="237.0591">Ensures that only one write</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="224" y="252.1919">occurs at a time (thread-safe).</text><polygon fill="#181818" points="678,282.3906,688,286.3906,678,290.3906,682,286.3906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="213" x2="684" y1="286.3906" y2="286.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="220" y="281.3247">[3]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="245" y="281.3247">allocatePage()/readPage(page_id)</text><polygon fill="#181818" points="933,311.5234,943,315.5234,933,319.5234,937,315.5234" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="700" x2="939" y1="315.5234" y2="315.5234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="707" y="310.4575">[4]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="732" y="310.4575">Reads/allocates data page</text><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="344.6563" y2="340.6563"/><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="344.6563" y2="348.6563"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="695" x2="944" y1="344.6563" y2="344.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="712" y="339.5903">[5]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="737" y="339.5903">Data page</text><path d="M218,357.6563 L218,397.6563 L461,397.6563 L461,367.6563 L451,357.6563 L218,357.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M451,357.6563 L451,367.6563 L461,367.6563 L451,357.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="224" y="374.7231">Determines the target page</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="222" x="224" y="389.856">and prepares it to write the record.</text><polygon fill="#181818" points="678,420.0547,688,424.0547,678,428.0547,682,424.0547" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="213" x2="684" y1="424.0547" y2="424.0547"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="220" y="418.9888">[6]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="245" y="418.9888">writePage(page_id, record)</text><polygon fill="#181818" points="933,449.1875,943,453.1875,933,457.1875,937,453.1875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="700" x2="939" y1="453.1875" y2="453.1875"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="707" y="448.1216">[7]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="732" y="448.1216">Writes record to data page</text><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="482.3203" y2="478.3203"/><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="482.3203" y2="486.3203"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="695" x2="944" y1="482.3203" y2="482.3203"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="712" y="477.2544">[8]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="737" y="477.2544">OK</text><polygon fill="#181818" points="405,507.4531,415,511.4531,405,515.4531,409,511.4531" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="213" x2="411" y1="511.4531" y2="511.4531"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="220" y="506.3872">[9]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="245" y="506.3872">insert(record.id, page_id)</text><path d="M432,524.4531 L432,564.4531 L733,564.4531 L733,534.4531 L723,524.4531 L432,524.4531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M723,524.4531 L723,534.4531 L733,534.4531 L723,524.4531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="280" x="438" y="541.52">The B+ index associates the record key (ID)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="275" x="438" y="556.6528">with the page where the record was stored.</text><polygon fill="#181818" points="678,586.8516,688,590.8516,678,594.8516,682,590.8516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="427" x2="684" y1="590.8516" y2="590.8516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="434" y="585.7856">[10]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="468" y="585.7856">read_node(node_page_id)</text><polygon fill="#181818" points="933,615.9844,943,619.9844,933,623.9844,937,619.9844" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="700" x2="939" y1="619.9844" y2="619.9844"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="707" y="614.9185">[11]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="741" y="614.9185">Reads index node page</text><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="649.1172" y2="645.1172"/><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="649.1172" y2="653.1172"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="695" x2="944" y1="649.1172" y2="649.1172"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="712" y="644.0513">[12]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="746" y="644.0513">Index node</text><line style="stroke:#181818;stroke-width:1.0;" x1="427" x2="469" y1="678.25" y2="678.25"/><line style="stroke:#181818;stroke-width:1.0;" x1="469" x2="469" y1="678.25" y2="691.25"/><line style="stroke:#181818;stroke-width:1.0;" x1="428" x2="469" y1="691.25" y2="691.25"/><polygon fill="#181818" points="438,687.25,428,691.25,438,695.25,434,691.25" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="434" y="673.1841">[13]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="215" x="468" y="673.1841">Insert key or split nodes if needed</text><polygon fill="#181818" points="678,716.3828,688,720.3828,678,724.3828,682,720.3828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="427" x2="684" y1="720.3828" y2="720.3828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="434" y="715.3169">[14]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="468" y="715.3169">write_node(node_page_id)</text><polygon fill="#181818" points="933,745.5156,943,749.5156,933,753.5156,937,749.5156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="700" x2="939" y1="749.5156" y2="749.5156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="707" y="744.4497">[15]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="741" y="744.4497">Writes updated index node(s)</text><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="778.6484" y2="774.6484"/><line style="stroke:#181818;stroke-width:1.0;" x1="696" x2="706" y1="778.6484" y2="782.6484"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="695" x2="944" y1="778.6484" y2="778.6484"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="712" y="773.5825">[16]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="746" y="773.5825">OK</text><line style="stroke:#181818;stroke-width:1.0;" x1="214" x2="224" y1="807.7813" y2="803.7813"/><line style="stroke:#181818;stroke-width:1.0;" x1="214" x2="224" y1="807.7813" y2="811.7813"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="213" x2="421" y1="807.7813" y2="807.7813"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="230" y="802.7153">[17]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="264" y="802.7153">Success/Result</text><line style="stroke:#181818;stroke-width:1.0;" x1="213" x2="255" y1="836.9141" y2="836.9141"/><line style="stroke:#181818;stroke-width:1.0;" x1="255" x2="255" y1="836.9141" y2="849.9141"/><line style="stroke:#181818;stroke-width:1.0;" x1="214" x2="255" y1="849.9141" y2="849.9141"/><polygon fill="#181818" points="224,845.9141,214,849.9141,224,853.9141,220,849.9141" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="220" y="831.8481">[18]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="254" y="831.8481">lock.release()</text><line style="stroke:#181818;stroke-width:1.0;" x1="42" x2="52" y1="879.0469" y2="875.0469"/><line style="stroke:#181818;stroke-width:1.0;" x1="42" x2="52" y1="879.0469" y2="883.0469"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="41" x2="207" y1="879.0469" y2="879.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="58" y="873.981">[19]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="92" y="873.981">return (success)</text><!--MD5=[f6de2213a34b1e0901bb541901187669]
+@startuml
+' === CONFIGURATION AND STYLE ===
+title **BonsaiDB :: Data Flow - INSERT Operation**
+autonumber "<b>[0]</b>"
+
+actor "User (CLI)" as User
+participant "DatabaseEngine" as Engine #D1E8FF
+participant "BPlusTree" as BTree #E1BEE7
+participant "FileManager" as FM #FFF8E1
+database "Database File (.db)" as DB #E8F5E9
+
+' === OPERATION FLOW ===
+User -> Engine: insert(record)
+activate Engine #3C7DC4
+
+Engine -> Engine: lock.acquire()\n(Exclusive lock)
+note right of Engine: Ensures that only one write\noccurs at a time (thread-safe).
+
+Engine -> FM: allocatePage()/readPage(page_id)
+activate FM #FFECB3
+FM -> DB: Reads/allocates data page
+DB - ->> FM: Data page
+deactivate FM
+
+note right of Engine: Determines the target page\nand prepares it to write the record.
+
+Engine -> FM: writePage(page_id, record)
+activate FM #FFECB3
+FM -> DB: Writes record to data page
+DB - ->> FM: OK
+deactivate FM
+
+Engine -> BTree: insert(record.id, page_id)
+activate BTree #BA68C8
+note right of BTree
+  The B+ index associates the record key (ID)
+  with the page where the record was stored.
+end note
+
+BTree -> FM: read_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Reads index node page
+DB - ->> FM: Index node
+deactivate FM
+
+BTree -> BTree: Insert key or split nodes if needed
+
+BTree -> FM: write_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Writes updated index node(s)
+DB - ->> FM: OK
+deactivate FM
+
+BTree - ->> Engine: Success/Result
+deactivate BTree
+
+Engine -> Engine: lock.release()
+
+Engine - ->> User: return (success)
+deactivate Engine
+@enduml
+
+@startuml
+title **BonsaiDB :: Data Flow - INSERT Operation**
+autonumber "<b>[0]</b>"
+
+actor "User (CLI)" as User
+participant "DatabaseEngine" as Engine #D1E8FF
+participant "BPlusTree" as BTree #E1BEE7
+participant "FileManager" as FM #FFF8E1
+database "Database File (.db)" as DB #E8F5E9
+
+User -> Engine: insert(record)
+activate Engine #3C7DC4
+
+Engine -> Engine: lock.acquire()\n(Exclusive lock)
+note right of Engine: Ensures that only one write\noccurs at a time (thread-safe).
+
+Engine -> FM: allocatePage()/readPage(page_id)
+activate FM #FFECB3
+FM -> DB: Reads/allocates data page
+DB - ->> FM: Data page
+deactivate FM
+
+note right of Engine: Determines the target page\nand prepares it to write the record.
+
+Engine -> FM: writePage(page_id, record)
+activate FM #FFECB3
+FM -> DB: Writes record to data page
+DB - ->> FM: OK
+deactivate FM
+
+Engine -> BTree: insert(record.id, page_id)
+activate BTree #BA68C8
+note right of BTree
+  The B+ index associates the record key (ID)
+  with the page where the record was stored.
+end note
+
+BTree -> FM: read_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Reads index node page
+DB - ->> FM: Index node
+deactivate FM
+
+BTree -> BTree: Insert key or split nodes if needed
+
+BTree -> FM: write_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Writes updated index node(s)
+DB - ->> FM: OK
+deactivate FM
+
+BTree - ->> Engine: Success/Result
+deactivate BTree
+
+Engine -> Engine: lock.release()
+
+Engine - ->> User: return (success)
+deactivate Engine
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

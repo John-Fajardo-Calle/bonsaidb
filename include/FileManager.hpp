@@ -26,4 +26,4 @@ private:
     std::fstream file_stream;
 };
 
-#endif //BONSAIDB_FILEMANAGER_HPP
+#endif

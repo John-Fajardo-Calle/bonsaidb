@@ -1,7 +1,6 @@
 #include "FileManager.hpp"
 #include <iostream>
 
-
 FileManager::FileManager(const std::string& db_filename) : filename(db_filename) {
     file_stream.open(filename, std::ios::in | std::ios::out | std::ios::binary);
 
@@ -19,7 +18,7 @@ FileManager::FileManager(const std::string& db_filename) : filename(db_filename)
     file_stream.seekg(0, std::ios::end);
     if (file_stream.tellg() == 0) {
         std::vector<char> empty(PAGE_SIZE, 0);
-        file_stream.write(empty.data(), PAGE_SIZE); // Página de metadatos
+        file_stream.write(empty.data(), PAGE_SIZE);
         file_stream.flush();
         file_stream.seekg(0, std::ios::beg);
         file_stream.seekp(0, std::ios::beg);
@@ -74,9 +73,7 @@ bool FileManager::writePage(uint32_t pageId, const Page& page) {
     if (!file_stream.is_open()) return false;
 
     std::vector<char> buffer;
-    page.serialize(buffer); // Usamos la serialización propia de la clase Page
-
-    // Asegurarnos que el buffer tenga el tamaño de página correcto
+    page.serialize(buffer);
     if (buffer.size() != PAGE_SIZE) {
         buffer.resize(PAGE_SIZE, 0);
     }
@@ -98,7 +95,7 @@ bool FileManager::readPage(uint32_t pageId, Page& page) {
     file_stream.read(buffer.data(), PAGE_SIZE);
 
     if (file_stream.gcount() > 0) {
-        page.deserialize(buffer); // Usamos la deserialización de la clase Page
+        page.deserialize(buffer);
         return true;
     }
 

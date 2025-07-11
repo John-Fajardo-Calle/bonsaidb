@@ -4,7 +4,7 @@
 #include <cstdio>
 #include "DatabaseEngine.hpp"
 #ifdef _WIN32
-#  include <windows.h> // Para la codificación de la consola en Windows
+#  include <windows.h>
 #endif
 
 int main() {

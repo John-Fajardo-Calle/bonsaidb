@@ -13,7 +13,6 @@ int main() {
     std::remove(fname);
     DatabaseEngine engine(fname);
 
-    // Insert multiple records
     for (int i = 0; i < 60; ++i) {
         Record r{};
         r.id = i;
@@ -23,12 +22,10 @@ int main() {
         assert(engine.insert(r));
     }
 
-    // Remove half of them
     for (int i = 0; i < 30; ++i) {
         assert(engine.remove(i));
     }
 
-    // Ensure removed records are gone and remaining exist
     for (int i = 0; i < 60; ++i) {
         auto rec = engine.find(i);
         if (i < 30) {
@@ -39,7 +36,6 @@ int main() {
         }
     }
 
-    // Ensure the engine still returns the correct records
     auto all = engine.dumpAll();
     for (int i = 30; i < 60; ++i) {
         bool found = false;

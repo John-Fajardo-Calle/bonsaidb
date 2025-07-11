@@ -1,4 +1,3 @@
-// BPlusTree.hpp
 #ifndef BONSAIDB_BPLUSTREE_HPP
 #define BONSAIDB_BPLUSTREE_HPP
 
@@ -44,4 +43,4 @@ private:
     void remove_entry(uint32_t node_id, int32_t key);
 };
 
-#endif // BONSAIDB_BPLUSTREE_HPP
+#endif

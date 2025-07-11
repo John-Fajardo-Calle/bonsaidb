@@ -54,7 +54,7 @@ int main(int argc, char* argv[]) {
     while (true) {
         std::cout << "bonsaidb> ";
         if (!std::getline(std::cin, line)) {
-            break; // Fin de la entrada (Ctrl+D)
+            break;
         }
 
         auto tokens = split(line, ' ');
@@ -77,7 +77,7 @@ int main(int argc, char* argv[]) {
                 Record new_record{};
                 new_record.id = std::stoi(tokens[1]);
                 strncpy(new_record.name, tokens[2].c_str(), sizeof(new_record.name) - 1);
-                new_record.name[sizeof(new_record.name) - 1] = '\0'; // Asegurar terminación nula.
+                new_record.name[sizeof(new_record.name) - 1] = '\0';
                 new_record.age = std::stoi(tokens[3]);
                 new_record.balance = std::stod(tokens[4]);
 

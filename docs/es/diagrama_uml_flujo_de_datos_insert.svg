@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="977px" preserveAspectRatio="none" style="width:1095px;height:977px;background:#FFFFFF;" version="1.1" viewBox="0 0 1095 977" width="1095px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="373" x="362.5" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="363" x="367.5" y="27.9951">BonsaiDB :: Flujo de Datos - Operación INSERT</text><rect fill="#3C7DC4" height="729.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="193" y="149.7266"/><rect fill="#BA68C8" height="296.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="407" y="511.4531"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="286.3906"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="424.0547"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="590.8516"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="720.3828"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="51" x2="51" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="198" x2="198" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="411.5" x2="411.5" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="745.5" x2="745.5" y1="118.5938" y2="897.0469"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1053" x2="1053" y1="118.5938" y2="897.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="115.292">Usuario (CLI)</text><ellipse cx="51" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M51,58.7969 L51,85.7969 M38,66.7969 L64,66.7969 M51,85.7969 L38,100.7969 M51,85.7969 L64,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="909.042">Usuario (CLI)</text><ellipse cx="51" cy="920.8438" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M51,928.8438 L51,955.8438 M38,936.8438 L64,936.8438 M51,955.8438 L38,970.8438 M51,955.8438 L64,970.8438 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#D1E8FF" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="134" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="141" y="107.292">DatabaseEngine</text><rect fill="#D1E8FF" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="134" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="141" y="916.042">DatabaseEngine</text><rect fill="#E1BEE7" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="369.5" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="376.5" y="107.292">BPlusTree</text><rect fill="#E1BEE7" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="369.5" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="376.5" y="916.042">BPlusTree</text><rect fill="#FFF8E1" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="697.5" y="87.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="704.5" y="107.292">FileManager</text><rect fill="#FFF8E1" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="697.5" y="896.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="704.5" y="916.042">FileManager</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1012" y="115.292">Archivo .db</text><path d="M1035,66.2969 C1035,56.2969 1053,56.2969 1053,56.2969 C1053,56.2969 1071,56.2969 1071,66.2969 L1071,92.2969 C1071,102.2969 1053,102.2969 1053,102.2969 C1053,102.2969 1035,102.2969 1035,92.2969 L1035,66.2969 " fill="#E8F5E9" style="stroke:#181818;stroke-width:1.5;"/><path d="M1035,66.2969 C1035,76.2969 1053,76.2969 1053,76.2969 C1053,76.2969 1071,76.2969 1071,66.2969 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1012" y="909.042">Archivo .db</text><path d="M1035,922.3438 C1035,912.3438 1053,912.3438 1053,912.3438 C1053,912.3438 1071,912.3438 1071,922.3438 L1071,948.3438 C1071,958.3438 1053,958.3438 1053,958.3438 C1053,958.3438 1035,958.3438 1035,948.3438 L1035,922.3438 " fill="#E8F5E9" style="stroke:#181818;stroke-width:1.5;"/><path d="M1035,922.3438 C1035,932.3438 1053,932.3438 1053,932.3438 C1053,932.3438 1071,932.3438 1071,922.3438 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><rect fill="#3C7DC4" height="729.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="193" y="149.7266"/><rect fill="#BA68C8" height="296.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="407" y="511.4531"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="286.3906"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="424.0547"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="590.8516"/><rect fill="#FFECB3" height="58.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="741" y="720.3828"/><polygon fill="#181818" points="181,145.7266,191,149.7266,181,153.7266,185,149.7266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="51" x2="187" y1="149.7266" y2="149.7266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="58" y="144.6606">[1]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="83" y="144.6606">insert(record)</text><line style="stroke:#181818;stroke-width:1.0;" x1="203" x2="245" y1="193.9922" y2="193.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="245" x2="245" y1="193.9922" y2="206.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="204" x2="245" y1="206.9922" y2="206.9922"/><polygon fill="#181818" points="214,202.9922,204,206.9922,214,210.9922,210,206.9922" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="210" y="181.3599">[2]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="235" y="173.7935">lock.acquire()</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="235" y="188.9263">(Bloqueo exclusivo)</text><path d="M208,219.9922 L208,259.9922 L428,259.9922 L428,229.9922 L418,219.9922 L208,219.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M418,219.9922 L418,229.9922 L428,229.9922 L418,219.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="199" x="214" y="237.0591">Asegura que solo una escritura</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186" x="214" y="252.1919">ocurra a la vez (thread-safe).</text><polygon fill="#181818" points="729,282.3906,739,286.3906,729,290.3906,733,286.3906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="203" x2="735" y1="286.3906" y2="286.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="210" y="281.3247">[3]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="235" y="281.3247">allocatePage()/readPage(page_id)</text><polygon fill="#181818" points="1041,311.5234,1051,315.5234,1041,319.5234,1045,315.5234" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="751" x2="1047" y1="315.5234" y2="315.5234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="758" y="310.4575">[4]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="783" y="310.4575">Lee/Asigna página de datos</text><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="344.6563" y2="340.6563"/><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="344.6563" y2="348.6563"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="746" x2="1052" y1="344.6563" y2="344.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="763" y="339.5903">[5]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="788" y="339.5903">Página de datos</text><path d="M208,357.6563 L208,397.6563 L460,397.6563 L460,367.6563 L450,357.6563 L208,357.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M450,357.6563 L450,367.6563 L460,367.6563 L450,357.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="214" y="374.7231">Determina la página destino</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="231" x="214" y="389.856">y la prepara para escribir el registro.</text><polygon fill="#181818" points="729,420.0547,739,424.0547,729,428.0547,733,424.0547" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="203" x2="735" y1="424.0547" y2="424.0547"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="210" y="418.9888">[6]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="235" y="418.9888">writePage(page_id, record)</text><polygon fill="#181818" points="1041,449.1875,1051,453.1875,1041,457.1875,1045,453.1875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="751" x2="1047" y1="453.1875" y2="453.1875"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="758" y="448.1216">[7]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="226" x="783" y="448.1216">Escribe registro en página de datos</text><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="482.3203" y2="478.3203"/><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="482.3203" y2="486.3203"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="746" x2="1052" y1="482.3203" y2="482.3203"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="763" y="477.2544">[8]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="788" y="477.2544">OK</text><polygon fill="#181818" points="395,507.4531,405,511.4531,395,515.4531,399,511.4531" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="203" x2="401" y1="511.4531" y2="511.4531"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="21" x="210" y="506.3872">[9]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="235" y="506.3872">insert(record.id, page_id)</text><path d="M422,524.4531 L422,564.4531 L751,564.4531 L751,534.4531 L741,524.4531 L422,524.4531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M741,524.4531 L741,534.4531 L751,534.4531 L741,524.4531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="428" y="541.52">El índice B+ asocia la clave (ID del registro)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="308" x="428" y="556.6528">con la página donde fue almacenado el registro.</text><polygon fill="#181818" points="729,586.8516,739,590.8516,729,594.8516,733,590.8516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="417" x2="735" y1="590.8516" y2="590.8516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="424" y="585.7856">[10]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="458" y="585.7856">read_node(node_page_id)</text><polygon fill="#181818" points="1041,615.9844,1051,619.9844,1041,623.9844,1045,619.9844" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="751" x2="1047" y1="619.9844" y2="619.9844"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="758" y="614.9185">[11]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="792" y="614.9185">Lee página de nodo del índice</text><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="649.1172" y2="645.1172"/><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="649.1172" y2="653.1172"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="746" x2="1052" y1="649.1172" y2="649.1172"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="763" y="644.0513">[12]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="797" y="644.0513">Nodo índice</text><line style="stroke:#181818;stroke-width:1.0;" x1="417" x2="459" y1="678.25" y2="678.25"/><line style="stroke:#181818;stroke-width:1.0;" x1="459" x2="459" y1="678.25" y2="691.25"/><line style="stroke:#181818;stroke-width:1.0;" x1="418" x2="459" y1="691.25" y2="691.25"/><polygon fill="#181818" points="428,687.25,418,691.25,428,695.25,424,691.25" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="424" y="673.1841">[13]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="458" y="673.1841">Inserta clave o divide nodos si es necesario</text><polygon fill="#181818" points="729,716.3828,739,720.3828,729,724.3828,733,720.3828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="417" x2="735" y1="720.3828" y2="720.3828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="424" y="715.3169">[14]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="458" y="715.3169">write_node(node_page_id)</text><polygon fill="#181818" points="1041,745.5156,1051,749.5156,1041,753.5156,1045,749.5156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="751" x2="1047" y1="749.5156" y2="749.5156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="758" y="744.4497">[15]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="244" x="792" y="744.4497">Escribe nodo(s) de índice actualizados</text><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="778.6484" y2="774.6484"/><line style="stroke:#181818;stroke-width:1.0;" x1="747" x2="757" y1="778.6484" y2="782.6484"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="746" x2="1052" y1="778.6484" y2="778.6484"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="763" y="773.5825">[16]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="797" y="773.5825">OK</text><line style="stroke:#181818;stroke-width:1.0;" x1="204" x2="214" y1="807.7813" y2="803.7813"/><line style="stroke:#181818;stroke-width:1.0;" x1="204" x2="214" y1="807.7813" y2="811.7813"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="203" x2="411" y1="807.7813" y2="807.7813"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="220" y="802.7153">[17]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="254" y="802.7153">Éxito/Resultado</text><line style="stroke:#181818;stroke-width:1.0;" x1="203" x2="245" y1="836.9141" y2="836.9141"/><line style="stroke:#181818;stroke-width:1.0;" x1="245" x2="245" y1="836.9141" y2="849.9141"/><line style="stroke:#181818;stroke-width:1.0;" x1="204" x2="245" y1="849.9141" y2="849.9141"/><polygon fill="#181818" points="214,845.9141,204,849.9141,214,853.9141,210,849.9141" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="210" y="831.8481">[18]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="244" y="831.8481">lock.release()</text><line style="stroke:#181818;stroke-width:1.0;" x1="52" x2="62" y1="879.0469" y2="875.0469"/><line style="stroke:#181818;stroke-width:1.0;" x1="52" x2="62" y1="879.0469" y2="883.0469"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="51" x2="197" y1="879.0469" y2="879.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="30" x="68" y="873.981">[19]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="102" y="873.981">return (éxito)</text><!--MD5=[a5530f6edfb64009183f1734c38051fd]
+@startuml
+' === CONFIGURACIÓN Y ESTILO ===
+title **BonsaiDB :: Flujo de Datos - Operación INSERT**
+autonumber "<b>[0]</b>"
+
+actor "Usuario (CLI)" as User
+participant "DatabaseEngine" as Engine #D1E8FF
+participant "BPlusTree" as BTree #E1BEE7
+participant "FileManager" as FM #FFF8E1
+database "Archivo .db" as DB #E8F5E9
+
+' === FLUJO DE LA OPERACIÓN ===
+User -> Engine: insert(record)
+activate Engine #3C7DC4
+
+Engine -> Engine: lock.acquire()\n(Bloqueo exclusivo)
+note right of Engine: Asegura que solo una escritura\nocurra a la vez (thread-safe).
+
+Engine -> FM: allocatePage()/readPage(page_id)
+activate FM #FFECB3
+FM -> DB: Lee/Asigna página de datos
+DB - ->> FM: Página de datos
+deactivate FM
+
+note right of Engine: Determina la página destino\ny la prepara para escribir el registro.
+
+Engine -> FM: writePage(page_id, record)
+activate FM #FFECB3
+FM -> DB: Escribe registro en página de datos
+DB - ->> FM: OK
+deactivate FM
+
+Engine -> BTree: insert(record.id, page_id)
+activate BTree #BA68C8
+note right of BTree
+  El índice B+ asocia la clave (ID del registro)
+  con la página donde fue almacenado el registro.
+end note
+
+BTree -> FM: read_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Lee página de nodo del índice
+DB - ->> FM: Nodo índice
+deactivate FM
+
+BTree -> BTree: Inserta clave o divide nodos si es necesario
+
+BTree -> FM: write_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Escribe nodo(s) de índice actualizados
+DB - ->> FM: OK
+deactivate FM
+
+BTree - ->> Engine: Éxito/Resultado
+deactivate BTree
+
+Engine -> Engine: lock.release()
+
+Engine - ->> User: return (éxito)
+deactivate Engine
+@enduml
+
+@startuml
+title **BonsaiDB :: Flujo de Datos - Operación INSERT**
+autonumber "<b>[0]</b>"
+
+actor "Usuario (CLI)" as User
+participant "DatabaseEngine" as Engine #D1E8FF
+participant "BPlusTree" as BTree #E1BEE7
+participant "FileManager" as FM #FFF8E1
+database "Archivo .db" as DB #E8F5E9
+
+User -> Engine: insert(record)
+activate Engine #3C7DC4
+
+Engine -> Engine: lock.acquire()\n(Bloqueo exclusivo)
+note right of Engine: Asegura que solo una escritura\nocurra a la vez (thread-safe).
+
+Engine -> FM: allocatePage()/readPage(page_id)
+activate FM #FFECB3
+FM -> DB: Lee/Asigna página de datos
+DB - ->> FM: Página de datos
+deactivate FM
+
+note right of Engine: Determina la página destino\ny la prepara para escribir el registro.
+
+Engine -> FM: writePage(page_id, record)
+activate FM #FFECB3
+FM -> DB: Escribe registro en página de datos
+DB - ->> FM: OK
+deactivate FM
+
+Engine -> BTree: insert(record.id, page_id)
+activate BTree #BA68C8
+note right of BTree
+  El índice B+ asocia la clave (ID del registro)
+  con la página donde fue almacenado el registro.
+end note
+
+BTree -> FM: read_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Lee página de nodo del índice
+DB - ->> FM: Nodo índice
+deactivate FM
+
+BTree -> BTree: Inserta clave o divide nodos si es necesario
+
+BTree -> FM: write_node(node_page_id)
+activate FM #FFECB3
+FM -> DB: Escribe nodo(s) de índice actualizados
+DB - ->> FM: OK
+deactivate FM
+
+BTree - ->> Engine: Éxito/Resultado
+deactivate BTree
+
+Engine -> Engine: lock.release()
+
+Engine - ->> User: return (éxito)
+deactivate Engine
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
